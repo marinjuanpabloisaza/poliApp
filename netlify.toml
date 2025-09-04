@@ -1,0 +1,7 @@
+[build]
+  publish = "dist/tu-app" # cambia 'tu-app' por el nombre de tu carpeta de build
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
