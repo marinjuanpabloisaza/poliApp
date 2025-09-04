@@ -1,5 +1,5 @@
 [build]
-  publish = "dist/tu-app" # cambia 'tu-app' por el nombre de tu carpeta de build
+  publish = "dist/poliApp"
 
 [[redirects]]
   from = "/*"
