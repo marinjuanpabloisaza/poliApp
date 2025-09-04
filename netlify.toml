@@ -1,5 +1,6 @@
 [build]
-  publish = "dist/poliApp"
+  command = "ng build"
+  publish = "dist/poliApp/browser"
 
 [[redirects]]
   from = "/*"
