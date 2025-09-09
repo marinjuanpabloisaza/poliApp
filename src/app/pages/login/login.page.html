@@ -1,23 +1,34 @@
 <div class="hero bg-base-200 min-h-screen">
   <div class="hero-content flex-col lg:flex-row-reverse">
     <div class="text-center lg:text-left">
-      <h1 class="text-5xl font-bold">Login now!</h1>
+      <h1 class="text-5xl font-bold">{{ 'login.title' | translate }}</h1>
       <p class="py-6">
-        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-        quasi. In deleniti eaque aut repudiandae et a id nisi.
+        {{ 'login.description' | translate }}
       </p>
     </div>
     <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
       <div class="card-body">
         <fieldset class="fieldset">
-          <label class="label">Email</label>
-          <input type="email" class="input" placeholder="Email" [(ngModel)]="email" />
-          
-          <label class="label">Password</label>
-          <input type="password" class="input" placeholder="Password" [(ngModel)]="password" />
-          
-          <div><a class="link link-hover">Forgot password?</a></div>
-          <button class="btn btn-neutral mt-4" (click)="login()">Login</button>
+          <label class="label">{{ 'login.email' | translate }}</label>
+          <input type="email" class="input" placeholder="{{ 'login.email' | translate }}" [(ngModel)]="email" />
+
+          <label class="label">{{ 'login.password' | translate }}</label>
+          <input type="password" class="input" placeholder="{{ 'login.password' | translate }}" [(ngModel)]="password" />
+
+          <div>
+            <a class="link link-hover">{{ 'login.forgotPassword' | translate }}</a>
+          </div>
+
+          <button class="btn btn-neutral mt-4" (click)="login()">
+            {{ 'login.button' | translate }}
+          </button>
+
+          <p class="text-center mt-4">
+            {{ 'login.noAccount' | translate }}
+            <a routerLink="/register" class="link link-hover">
+              {{ 'login.registerNow' | translate }}
+            </a>
+          </p>
         </fieldset>
       </div>
     </div>
