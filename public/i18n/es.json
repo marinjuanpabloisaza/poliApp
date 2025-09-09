@@ -1,0 +1,12 @@
+{
+  "login": {
+    "title": "Iniciar sesión",
+    "description": "Accede a tu cuenta para explorar un entorno diseñado con creatividad, innovación y tecnología, donde cada inicio de sesión abre la puerta a nuevas oportunidades y proyectos digitales que transforman tus ideas en realidades.",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "forgotPassword": "¿Has olvidado tu contraseña?",
+    "button": "Iniciar sesión",
+    "noAccount": "¿No tienes cuenta?",
+    "registerNow": "Regístrate ahora"
+  }
+}

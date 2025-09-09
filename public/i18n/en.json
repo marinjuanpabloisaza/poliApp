@@ -1,0 +1,12 @@
+{
+  "login": {
+    "title": "Sign in",
+    "description": "Access your account to explore an environment designed with creativity, innovation, and technology, where every login opens the door to new opportunities and digital projects that transform your ideas into realities.",
+    "email": "Email",
+    "password": "Password",
+    "forgotPassword": "Forgot your password?",
+    "button": "Login",
+    "noAccount": "Don’t have an account?",
+    "registerNow": "Register now"
+  }
+}
