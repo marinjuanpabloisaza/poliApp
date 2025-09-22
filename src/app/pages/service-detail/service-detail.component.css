@@ -1,0 +1,77 @@
+/* Animated gradient background */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-shift {
+  animation: gradient-shift 12s ease infinite;
+}
+
+/* Glassmorphism effects */
+.backdrop-blur-10 {
+  backdrop-filter: blur(10px);
+}
+
+.backdrop-blur-15 {
+  backdrop-filter: blur(15px);
+}
+
+.backdrop-blur-20 {
+  backdrop-filter: blur(20px);
+}
+
+/* Custom button styles */
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .content-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem;
+  }
+  
+  .service-header {
+    padding: 2rem !important;
+  }
+  
+  .service-icon {
+    width: 5rem !important;
+    height: 5rem !important;
+    font-size: 2.5rem !important;
+  }
+  
+  .section {
+    padding: 1.5rem !important;
+  }
+  
+  .info-card {
+    padding: 1.5rem !important;
+  }
+  
+  .cta-section {
+    padding: 2rem !important;
+  }
+  
+  .cta-buttons {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  
+  .btn {
+    width: 100% !important;
+    max-width: 300px !important;
+    justify-content: center !important;
+  }
+}

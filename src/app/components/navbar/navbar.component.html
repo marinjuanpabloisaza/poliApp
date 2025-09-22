@@ -1,59 +1,49 @@
-<div class="navbar bg-base-100 shadow-sm">
+<div class="navbar bg-white shadow-sm px-6">
   <div class="flex-1">
-    <a class="btn btn-ghost text-xl">daisyUI</a>
+    <a class="btn btn-ghost text-xl">
+      <div class="flex items-center">
+        <!-- Logo with gradient circle -->
+        <div class="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 mr-2 flex items-center justify-center">
+          <span class="text-white font-bold text-sm">C</span>
+        </div>
+        <span class="text-gray-800 font-semibold">Kairoz</span>
+      </div>
+    </a>
   </div>
 
   <div class="flex-none">
-
-    <!-- Carrito -->
-    <div class="dropdown dropdown-end">
-      <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-        <div class="indicator">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-          </svg>
-          <span class="badge badge-sm indicator-item">8</span>
-        </div>
-      </div>
-      <div tabindex="0" class="card card-compact dropdown-content bg-base-100 z-1 mt-3 w-52 shadow">
-        <div class="card-body">
-          <span class="text-lg font-bold">8 Items</span>
-          <span class="text-info">Subtotal: $999</span>
-          <div class="card-actions">
-            <button class="btn btn-primary btn-block">View cart</button>
-          </div>
-        </div>
-      </div>
+    <!-- Botón Volver al Catálogo (solo en página de servicio) -->
+    <div *ngIf="isServicePage()" class="mr-4">
+      <a routerLink="/dashboard" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full hover:from-blue-700 hover:to-purple-700 transition-all flex items-center gap-2">
+        ← Volver al Catálogo
+      </a>
     </div>
-
-    <div class="dropdown dropdown-end">
-      <svg class="btn btn-ghost"  xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="15px" fill="#010101" (click)="switchLang()">
-        <path
-          d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-7-.5-14.5T799-507q-5 29-27 48t-52 19h-80q-33 0-56.5-23.5T560-520v-40H400v-80q0-33 23.5-56.5T480-720h40q0-23 12.5-40.5T563-789q-20-5-40.5-8t-42.5-3q-134 0-227 93t-93 227h200q66 0 113 47t47 113v40H400v110q20 5 39.5 7.5T480-160Z" />
-      </svg>
-    </div>
-
+    
+    <!-- Navegación normal -->
+    <ul class="menu menu-horizontal px-1 text-gray-800" *ngIf="!isServicePage()">
+      <li><a class="hover:text-blue-600">Inicio</a></li>
+      <li><a class="hover:text-blue-600">Servicios</a></li>
+      <li><a class="hover:text-blue-600">Nosotros</a></li>
+      <li><a class="hover:text-blue-600">Contacto</a></li>
+      <!-- Botón de login -->
+      <li *ngIf="!user()">
+        <a routerLink="/login" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all">
+          Login
+        </a>
+      </li>
+    </ul>
     <!-- Usuario logueado -->
-    <div class="dropdown dropdown-end" *ngIf="user()">
+    <div class="dropdown dropdown-end" *ngIf="user() && !isServicePage()">
       <div tabindex="0" role="button" class="btn btn-ghost">
         <div class="w-25 rounded-full">
           {{ user()?.userName }}
         </div>
       </div>
-
       <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
         <li><span class="font-bold">Hola, {{ user()?.userName }}</span></li>
         <li><a (click)="authService.logout()">Logout</a></li>
       </ul>
     </div>
-
-    <!-- Botón de login -->
-    <div class="dropdown dropdown-end" *ngIf="!user()">
-      <a routerLink="/login" class="btn btn-ghost">Login</a>
-    </div>
-
-
   </div>
 </div>
 
