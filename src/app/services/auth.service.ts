@@ -7,6 +7,9 @@ import { environment } from '../../environments/environment';
 export interface UserData {
   id: string;
   userName: string;
+  name: string;
+  lastName: string;
+  role: string;
   accessToken: string;
   refreshToken: string;
 }
@@ -19,13 +22,12 @@ interface LoginResponse {
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-private apiUrl = `${environment.apiUrl}/auth`;
+  private apiUrl = `${environment.apiUrl}/auth`;
 
   private currentUserSubject = new BehaviorSubject<UserData | null>(null);
   public currentUser$ = this.currentUserSubject.asObservable();
 
-//   private inactivityTime = 2 * 60 * 1000; // 2 minutos
-private inactivityTime = 10 * 1000; // 10 segundos
+  private inactivityTime = 2 * 60 * 1000; // 2 minutos
 
   private timer: any;
 
@@ -38,12 +40,14 @@ private inactivityTime = 10 * 1000; // 10 segundos
     }
   }
 
-  login(email: string, password: string): Observable<LoginResponse> {
-    return this.http.post<LoginResponse>(`${this.apiUrl}/login`, { email, password })
+  login(userName: string, password: string): Observable<LoginResponse> {
+    return this.http.post<LoginResponse>(`${this.apiUrl}/login`, { userName, password })
       .pipe(
         tap(res => {
           if (res.success && res.data) {
             // Guarda en sessionStorage y BehaviorSubject
+            sessionStorage.removeItem('currentUser');
+
             sessionStorage.setItem('currentUser', JSON.stringify(res.data));
             this.currentUserSubject.next(res.data);
             this.startInactivityWatcher(); // reinicia vigilancia al hacer login

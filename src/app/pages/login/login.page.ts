@@ -4,22 +4,27 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import {
-  TranslateService,
   TranslatePipe,
-  TranslateDirective, _
+ _
 } from "@ngx-translate/core";
+import { RouterModule } from '@angular/router';
+
 
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, FormsModule, TranslatePipe, TranslateDirective],
+  imports: [CommonModule, FormsModule, TranslatePipe, RouterModule],
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.css']
 })
 export class LoginPage {
   protected readonly title = signal('poliApp');
-  private translate = inject(TranslateService);
+  loading = signal<boolean>(false);
+  error = signal<boolean>(false);
+  errorMensaje = signal<string>('');
+
+
 
   email = '';
   password = '';
@@ -29,16 +34,27 @@ export class LoginPage {
     private router: Router,
 
   ) {
- 
+
   }
 
   login() {
-    this.authService.login(this.email, this.password).subscribe(res => {
-      console.log('Login response:', res);
-      if (res.success && res.data) {
-        console.log('Login exitoso, datos guardados en sessionStorage');
-        this.router.navigate(['/dashboard']);
-        console.error('Error en login:', res.code);
+    this.loading.set(true);
+
+    this.authService.login(this.email, this.password).subscribe({
+      next: (res) => {
+
+        if (res.success && res.data) {
+          this.router.navigate(['/dashboard']);
+        } else {
+          this.error.set(true);
+          this.errorMensaje.set(res.code as string);
+        }
+      },
+      error: (err) => {
+        this.error.set(true);
+      },
+      complete: () => {
+        this.loading.set(false);
       }
     });
   }
