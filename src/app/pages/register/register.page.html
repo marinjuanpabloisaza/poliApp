@@ -1,0 +1,82 @@
+@if (loading()) {
+<div class="fixed inset-0 flex items-center justify-center bg-white/70 z-50">
+  <span class="loading loading-spinner loading-lg text-info"></span>
+</div>
+}
+<div class="flex justify-center items-center min-h-screen bg-gray-100">
+  <div class="w-full max-w-md p-8 bg-white rounded-xl shadow-md">
+    <h2 class="text-2xl font-bold mb-6 text-center">
+      {{ 'register.createAccount' | translate }}
+    </h2>
+
+    <form (ngSubmit)="onRegister(registerForm)" #registerForm="ngForm">
+
+      <!-- Nombre -->
+      <div class="form-control mb-4">
+        <label class="label">
+          <span class="label-text">{{ 'register.name' | translate }}</span>
+        </label>
+        <input type="text" name="name" ngModel required placeholder="{{ 'register.placeholder.name' | translate }}"
+          class="input input-bordered w-full" />
+      </div>
+
+      <div class="form-control mb-4">
+        <label class="label">
+          <span class="label-text">{{ 'register.lastName' | translate }}</span>
+        </label>
+        <input type="text" name="lastName" ngModel required
+          placeholder="{{ 'register.placeholder.lastName' | translate }}" class="input input-bordered w-full" />
+      </div>
+
+      <!-- Email -->
+      <div class="form-control mb-4">
+        <label class="label">
+          <span class="label-text">{{ 'register.email' | translate }}</span>
+        </label>
+        <input type="email" name="userName" ngModel required placeholder="{{ 'register.placeholder.email' | translate }}"
+          class="input input-bordered w-full" />
+      </div>
+
+      <!-- Contraseña -->
+      <div class="form-control mb-4">
+        <label class="label">
+          <span class="label-text">{{ 'register.password' | translate }}</span>
+        </label>
+        <input type="password" name="password" ngModel required
+          placeholder="{{ 'register.placeholder.password' | translate }}" class="input input-bordered w-full" />
+      </div>
+
+      <!-- Confirmar Contraseña -->
+      <div class="form-control mb-6">
+        <label class="label">
+          <span class="label-text">{{ 'register.confirmPassword' | translate }}</span>
+        </label>
+        <input type="password" name="confirmPassword" ngModel required
+          placeholder="{{ 'register.placeholder.confirmPassword' | translate }}" class="input input-bordered w-full" />
+      </div>
+      @if (errorMensaje()) {
+            <div role="alert" class="alert alert-error alert-soft mb-3.5">
+        {{ 'codeResponse.' + errorMensaje() | translate }}
+ </div>
+      }
+      <!-- mensaje de error -->
+
+
+
+      <!-- Botón -->
+      <div class="form-control">
+        <button type="submit" [disabled]="!registerForm.valid" class="btn btn-primary w-full">
+          {{ 'register.signUp' | translate }}
+        </button>
+      </div>
+
+    </form>
+
+    <p class="mt-4 text-center text-sm text-gray-600">
+      {{ 'register.alreadyHaveAccount' | translate }}
+      <a routerLink="/login" class="text-blue-500 hover:underline">
+        {{ 'register.loginHere' | translate }}
+      </a>
+    </p>
+  </div>
+</div>

@@ -1,4 +1,9 @@
 {
+  "dashboard": {
+    "logout": "Logout",
+    "role": "Role",
+    "hi": "hi"
+  },
   "login": {
     "title": "Sign in",
     "description": "Access your account to explore an environment designed with creativity, innovation, and technology, where every login opens the door to new opportunities and digital projects that transform your ideas into realities.",
@@ -7,6 +12,33 @@
     "forgotPassword": "Forgot your password?",
     "button": "Login",
     "noAccount": "Don’t have an account?",
-    "registerNow": "Register now"
+    "registerNow": "Register now",
+    "INVALID_PASSWORD": "Invalid password",
+    "EMAIL_EXIST": "this userName aready exiist"
+  },
+  "register": {
+    "errorPassword": "Passwords do not match",
+    "createAccount": "Create account",
+    "name": "Name",
+    "lastName": "lastName",
+    "fullName": "Full name",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "signUp": "Sign Up",
+    "alreadyHaveAccount": "Already have an account?",
+    "loginHere": "Log in here",
+    "placeholder": {
+      "name": "Enter your Name",
+      "lastName": "Enter your lastName",
+      "fullName": "Enter your full name",
+      "email": "Enter your email",
+      "password": "Enter your password",
+      "confirmPassword": "Confirm your password"
+    }
+  },
+  "codeResponse": {
+    "PASSWORD_NO_FOUNT": "Passwords do not match",
+    "EMAIL_EXIST": "this userName aready exiist"
   }
 }

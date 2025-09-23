@@ -1,4 +1,9 @@
 {
+  "dashboard": {
+    "logout": "Cerrar sesión",
+    "role": "Rol",
+    "hi": "Hola"
+  },
   "login": {
     "title": "Iniciar sesión",
     "description": "Accede a tu cuenta para explorar un entorno diseñado con creatividad, innovación y tecnología, donde cada inicio de sesión abre la puerta a nuevas oportunidades y proyectos digitales que transforman tus ideas en realidades.",
@@ -7,6 +12,32 @@
     "forgotPassword": "¿Has olvidado tu contraseña?",
     "button": "Iniciar sesión",
     "noAccount": "¿No tienes cuenta?",
-    "registerNow": "Regístrate ahora"
+    "registerNow": "Regístrate ahora",
+    "INVALID_PASSWORD": "Contraseña no válida",
+    "EMAIL_EXIST": "Este usuario ya esta registrado"
+  },
+  "register": {
+    "errorPassword": "Las contraseñas no coinciden",
+    "createAccount": "Crear cuenta",
+    "name": "Nombre",
+    "lastName": "Apellido",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "confirmPassword": "Confirmar contraseña",
+    "signUp": "Registrarse",
+    "alreadyHaveAccount": "¿Ya tienes cuenta?",
+    "loginHere": "Inicia sesión",
+    "placeholder": {
+      "name": "Ingresa tu Nombre",
+      "lastName": " Ingresa tu Apellido",
+      "fullName": "Ingresa tu nombre",
+      "email": "Ingresa tu email",
+      "password": "Ingresa tu contraseña",
+      "confirmPassword": "Confirma tu contraseña"
+    }
+  },
+  "codeResponse": {
+    "EMAIL_EXIST": "Este usuario ya esta registrado",
+    "PASSWORD_NO_FOUNT": "Las contraseñas no coinciden"
   }
 }
