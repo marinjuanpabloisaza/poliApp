@@ -1,5 +1,4 @@
 import { Component, signal, inject } from '@angular/core';
-import { AuthService } from '../../services/auth.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -8,7 +7,8 @@ import {
   TranslatePipe,
   TranslateDirective, _
 } from "@ngx-translate/core";
-import { UserService } from '../../services/user.service';
+import { UserService } from '../../../services/user.service';
+import { AuthService } from '../../../services/auth.service';
 
 
 @Component({
@@ -32,8 +32,6 @@ export class RegisterPage {
     private userService: UserService,
     private authService: AuthService,
     private router: Router,
-
-
   ) {
 
   }

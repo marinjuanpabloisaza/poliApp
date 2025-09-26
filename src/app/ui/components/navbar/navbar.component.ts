@@ -1,5 +1,4 @@
 import { Component, effect, signal, OnDestroy } from '@angular/core';
-import { AuthService, UserData } from '../../services/auth.service';
 import { CommonModule } from '@angular/common';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -9,6 +8,7 @@ import {
   TranslatePipe,
  _
 } from "@ngx-translate/core";
+import { AuthService, UserData } from '../../../services/auth.service';
 @Component({
   selector: 'navbarCom',
   standalone: true,

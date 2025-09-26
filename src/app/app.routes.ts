@@ -1,10 +1,10 @@
 
 
 import { Routes } from '@angular/router';
-import { DashboardPage } from './pages/dashboard/dashboard.componet';
-import { LoginPage } from './pages/login/login.page';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { RegisterPage } from './pages/register/register.page';
+import { NavbarComponent } from './ui/components/navbar/navbar.component';
+import { DashboardPage } from './ui/pages/dashboard/dashboard.componet';
+import { LoginPage } from './ui/pages/login/login.page';
+import { RegisterPage } from './ui/pages/register/register.page';
 
 export const routes: Routes = [
   {
