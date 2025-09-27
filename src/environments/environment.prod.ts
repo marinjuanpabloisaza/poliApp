@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://poliappnestjs.onrender.com',
+  apiUrl: 'https://poliappnestjs-production.up.railway.app',
 };
