@@ -1,21 +1,21 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'welcome-component',
-//   imports: [NavbarComponent],
   standalone: true,
-  templateUrl: './dashboard.component.html',
-//   styleUrl: './dashboard.component.css',
+  templateUrl: './dashboard.html',
+  styleUrl: './dashboard.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 
 })
 export class DashboardPage {
+  constructor(private router: Router) {}
 
-
-
-
-
+  navigateToService(serviceId: string) {
+    this.router.navigate(['/service', serviceId]);
+  }
 
   title = 'porfolio';
 }
