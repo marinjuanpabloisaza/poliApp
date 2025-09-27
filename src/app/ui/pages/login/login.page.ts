@@ -1,5 +1,4 @@
 import { Component, signal, inject } from '@angular/core';
-import { AuthService } from '../../services/auth.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -8,6 +7,7 @@ import {
  _
 } from "@ngx-translate/core";
 import { RouterModule } from '@angular/router';
+import { AuthService } from '../../../services/auth.service';
 
 
 
