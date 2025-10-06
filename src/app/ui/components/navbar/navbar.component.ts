@@ -1,20 +1,29 @@
-import { Component, effect, signal, OnDestroy } from '@angular/core';
-import { CommonModule, NgIf, TitleCasePipe, UpperCasePipe } from '@angular/common';
-import { NavigationEnd, Router, RouterModule, RouterOutlet } from '@angular/router';
-import { filter, Subscription } from 'rxjs';
-import { TranslateService } from '@ngx-translate/core';
+import { CommonModule, TitleCasePipe } from '@angular/common';
+import { Component, OnDestroy, signal } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import {
-  TranslatePipe,
- _
-} from "@ngx-translate/core";
+  NavigationEnd,
+  Router,
+  RouterLink,
+  RouterModule,
+} from '@angular/router';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { filter, Subscription } from 'rxjs';
 import { AuthService, UserData } from '../../../services/auth.service';
+
 @Component({
-  selector: 'navbarCom',
+  selector: 'kairoz-navbar',
   standalone: true,
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
-  imports: [CommonModule, RouterModule, RouterOutlet, MatIconModule, TranslatePipe, TitleCasePipe],
+  imports: [
+    CommonModule,
+    RouterModule,
+    RouterLink,
+    MatIconModule,
+    TranslatePipe,
+    TitleCasePipe,
+  ],
 })
 export class NavbarComponent implements OnDestroy {
   user = signal<UserData | null>(null);
@@ -27,15 +36,14 @@ export class NavbarComponent implements OnDestroy {
     public authService: AuthService,
     private router: Router
   ) {
-
     // Suscribirse al BehaviorSubject de AuthService
-    this.sub = this.authService.currentUser$.subscribe(u => {
+    this.sub = this.authService.currentUser$.subscribe((u) => {
       this.user.set(u);
     });
 
     // Suscribirse a cambios de ruta
     this.router.events
-      .pipe(filter(event => event instanceof NavigationEnd))
+      .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe((event: NavigationEnd) => {
         this.currentUrl.set(event.url);
       });

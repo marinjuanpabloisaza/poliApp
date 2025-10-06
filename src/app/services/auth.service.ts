@@ -1,5 +1,5 @@
-import { Injectable, NgZone } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable, NgZone } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { environment } from '../../environments/environment';
@@ -41,9 +41,10 @@ export class AuthService {
   }
 
   login(userName: string, password: string): Observable<LoginResponse> {
-    return this.http.post<LoginResponse>(`${this.apiUrl}/login`, { userName, password })
+    return this.http
+      .post<LoginResponse>(`${this.apiUrl}/login`, { userName, password })
       .pipe(
-        tap(res => {
+        tap((res) => {
           if (res.success && res.data) {
             // Guarda en sessionStorage y BehaviorSubject
             sessionStorage.removeItem('currentUser');
@@ -72,9 +73,11 @@ export class AuthService {
 
   private startInactivityWatcher() {
     // Escucha eventos de interacción del usuario
-    ['mousemove', 'mousedown', 'keypress', 'touchstart', 'scroll'].forEach(event => {
-      window.addEventListener(event, () => this.resetTimer());
-    });
+    ['mousemove', 'mousedown', 'keypress', 'touchstart', 'scroll'].forEach(
+      (event) => {
+        window.addEventListener(event, () => this.resetTimer());
+      }
+    );
 
     this.resetTimer();
   }
@@ -82,7 +85,10 @@ export class AuthService {
   private resetTimer() {
     clearTimeout(this.timer);
     this.ngZone.runOutsideAngular(() => {
-      this.timer = setTimeout(() => this.ngZone.run(() => this.logout()), this.inactivityTime);
+      this.timer = setTimeout(
+        () => this.ngZone.run(() => this.logout()),
+        this.inactivityTime
+      );
     });
   }
 }

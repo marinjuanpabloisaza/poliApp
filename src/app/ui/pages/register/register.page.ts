@@ -1,29 +1,23 @@
-import { Component, signal, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
-import {
-  TranslateService,
-  TranslatePipe,
-  TranslateDirective, _
-} from "@ngx-translate/core";
-import { UserService } from '../../../services/user.service';
+import { Router, RouterLink } from '@angular/router';
+import { TranslatePipe } from '@ngx-translate/core';
 import { AuthService } from '../../../services/auth.service';
-
+import { UserService } from '../../../services/user.service';
 
 @Component({
-  selector: 'app-register',
+  selector: 'kairoz-register',
   standalone: true,
-  imports: [CommonModule, FormsModule, TranslatePipe, TranslateDirective],
+  imports: [CommonModule, FormsModule, TranslatePipe, RouterLink],
   templateUrl: './register.page.html',
-  //   styleUrls: ['./login.page.css']
 })
 export class RegisterPage {
   model = {
     fullName: '',
     email: '',
     password: '',
-    confirmPassword: ''
+    confirmPassword: '',
   };
   errorMensaje = signal<string>('');
   loading = signal<boolean>(false);
@@ -31,14 +25,12 @@ export class RegisterPage {
   constructor(
     private userService: UserService,
     private authService: AuthService,
-    private router: Router,
-  ) {
-
-  }
+    private router: Router
+  ) {}
 
   onRegister(form: any) {
     if (form.value.password !== form.value.confirmPassword) {
-          this.loading.set(false);
+      this.loading.set(false);
       this.errorMensaje.set('PASSWORD_NO_FOUNT');
       return;
     } else {
@@ -56,21 +48,17 @@ export class RegisterPage {
               },
               complete: () => {
                 this.loading.set(false);
-              }
+              },
             });
           } else {
             this.errorMensaje.set(res.code as string);
-                      this.loading.set(false);
-
-
+            this.loading.set(false);
           }
         },
         error: (err) => {
           this.errorMensaje.set(err as string);
-        }
+        },
       });
     }
-
   }
-
 }
