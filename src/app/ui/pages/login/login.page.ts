@@ -1,48 +1,32 @@
-import { Component, signal, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
-import {
-  TranslatePipe,
- _
-} from "@ngx-translate/core";
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { TranslatePipe } from '@ngx-translate/core';
 import { AuthService } from '../../../services/auth.service';
 
-
-
 @Component({
-  selector: 'app-login',
+  selector: 'kairoz-login',
   standalone: true,
   imports: [CommonModule, FormsModule, TranslatePipe, RouterModule],
   templateUrl: './login.page.html',
-  styleUrls: ['./login.page.css']
+  styleUrls: ['./login.page.css'],
 })
 export class LoginPage {
   protected readonly title = signal('poliApp');
   loading = signal<boolean>(false);
   error = signal<boolean>(false);
   errorMensaje = signal<string>('');
-
-
-
   email = '';
   password = '';
 
-  constructor(
-    private authService: AuthService,
-    private router: Router,
-
-  ) {
-
-  }
+  constructor(private authService: AuthService, private router: Router) {}
 
   login() {
     this.loading.set(true);
 
     this.authService.login(this.email, this.password).subscribe({
       next: (res) => {
-
         if (res.success && res.data) {
           this.router.navigate(['/dashboard']);
         } else {
@@ -55,7 +39,7 @@ export class LoginPage {
       },
       complete: () => {
         this.loading.set(false);
-      }
+      },
     });
   }
 }

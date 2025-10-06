@@ -1,8 +1,40 @@
 {
-  "dashboard": {
+  "navbar": {
     "logout": "Cerrar sesión",
     "role": "Rol",
-    "hi": "Hola"
+    "hi": "Hola",
+    "services": "Servicios",
+    "aboutUs": "Nosotros",
+    "contact": "Contacto"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "privacyPolicy": "Política de privacidad",
+    "termsAndConditions": "Términos y condiciones",
+    "followUs": "Síguenos"
+  },
+  "dashboard": {
+    "welcome": "Tecnología al momento justo",
+    "description": "Soluciones digitales que transforman ideas en realidades innovadoras.",
+    "discoverMore": "Descubre más",
+    "whoAreWe": "¿Quiénes somos?",
+    "whoAreWeText": "En Kairoz, somos una empresa dedicada a ofrecer soluciones digitales innovadoras que impulsan la transformación tecnológica de nuestros clientes. Nuestro equipo de expertos trabaja con pasión y compromiso para desarrollar proyectos a medida que se adaptan a las necesidades específicas de cada negocio. Nos especializamos en una amplia gama de servicios, desde el desarrollo de software y aplicaciones móviles hasta el diseño web y la consultoría tecnológica. En Kairoz, creemos en el poder de la tecnología para transformar ideas en realidades, y estamos comprometidos en acompañar a nuestros clientes en cada paso de su viaje digital.",
+    "ourServices": "Nuestros servicios",
+    "service1": "Desarrollo de Software",
+    "service1Text": "Creamos soluciones de software personalizadas que se adaptan a las necesidades específicas de tu negocio, utilizando las últimas tecnologías para garantizar eficiencia y escalabilidad.",
+    "service2": "Consultoría Tecnológica",
+    "service2Text": "Ofrecemos asesoramiento experto para ayudarte a tomar decisiones informadas sobre la implementación de tecnologías que impulsen el crecimiento y la eficiencia de tu empresa.",
+    "service3": "Transformación Digital",
+    "service3Text": "Modernización completa de procesos empresariales con soluciones digitales innovadoras.",
+    "service4": "Soluciones Cloud",
+    "service4Text": "Migración y optimización de infraestructura en la nube para mayor eficiencia.",
+    "service5": "Ciberseguridad",
+    "service5Text": "Protección integral de datos y sistemas con las mejores prácticas de seguridad.",
+    "service6": "Soporte técnico",
+    "service6Text": "Mantenimiento y soporte continuo para garantizar el funcionamiento óptimo.",
+    "contactUs": "Contáctanos",
+    "contactUsText": "¿Listo para llevar tu negocio al siguiente nivel? En Kairoz, estamos aquí para ayudarte a transformar tus ideas en realidades digitales. Ya sea que necesites una solución de software personalizada, un sitio web atractivo o una aplicación móvil innovadora, nuestro equipo de expertos está listo para acompañarte en cada paso del camino. No dudes en ponerte en contacto con nosotros para discutir tus necesidades y descubrir cómo podemos colaborar para impulsar el éxito de tu empresa en el mundo digital. ¡Esperamos saber de ti pronto!",
+    "serviceBtnDetail": "Ver Detalles"
   },
   "login": {
     "title": "Iniciar sesión",

@@ -4,13 +4,12 @@
 </div>
 }
 
-
 <div class="hero bg-base-200 min-h-screen">
   <div class="hero-content flex-col lg:flex-row-reverse">
     <div class="text-center lg:text-left">
-      <h1 class="text-5xl font-bold">{{ 'login.title' | translate }}</h1>
+      <h1 class="text-5xl font-bold">{{ "login.title" | translate }}</h1>
       <p class="py-6">
-        {{ 'login.description' | translate }}
+        {{ "login.description" | translate }}
       </p>
     </div>
     <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
@@ -18,19 +17,36 @@
         <form #form="ngForm" (ngSubmit)="login()">
           <fieldset class="fieldset">
             <!-- Email -->
-            <label class="label">{{ 'login.email' | translate }}</label>
-            <input type="email" name="email" class="input" placeholder="{{ 'login.email' | translate }}"
-              [(ngModel)]="email" required #emailCtrl="ngModel" />
+            <label class="label">{{ "login.email" | translate }}</label>
+            <input
+              type="email"
+              name="email"
+              class="input"
+              placeholder="{{ 'login.email' | translate }}"
+              [(ngModel)]="email"
+              required
+              #emailCtrl="ngModel"
+            />
 
             <!-- mensaje de error -->
-            <p class="validator-hint text-error" *ngIf="emailCtrl.invalid && emailCtrl.touched">
-              {{ 'El email es obligatorio y debe ser válido' }}
+            <p
+              class="validator-hint text-error"
+              *ngIf="emailCtrl.invalid && emailCtrl.touched"
+            >
+              {{ "El email es obligatorio y debe ser válido" }}
             </p>
 
             <!-- Password -->
-            <label class="label">{{ 'login.password' | translate }}</label>
-            <input type="password" name="password" class="input" placeholder="{{ 'login.password' | translate }}"
-              [(ngModel)]="password" required #passwordCtrl="ngModel" />
+            <label class="label">{{ "login.password" | translate }}</label>
+            <input
+              type="password"
+              name="password"
+              class="input"
+              placeholder="{{ 'login.password' | translate }}"
+              [(ngModel)]="password"
+              required
+              #passwordCtrl="ngModel"
+            />
 
             <!-- mensaje de error -->
             <!-- <p class="text-error">
@@ -40,30 +56,35 @@
             <!-- Mensaje de error general -->
             @if (error()) {
             <div role="alert" class="alert alert-error alert-soft">
-              <span> {{ 'login.'+ errorMensaje() | translate }} </span>
+              <span> {{ "login." + errorMensaje() | translate }} </span>
             </div>
             }
 
             <!-- Forgot password -->
             <div>
-              <a class="link link-hover">{{ 'login.forgotPassword' | translate }}</a>
+              <a class="link link-hover">{{
+                "login.forgotPassword" | translate
+              }}</a>
             </div>
 
             <!-- Botón -->
-            <button class="btn btn-neutral mt-4" type="submit" [disabled]="form.invalid || loading()">
-              {{ 'login.button' | translate }}
+            <button
+              class="btn btn-neutral mt-4"
+              type="submit"
+              [disabled]="form.invalid || loading()"
+            >
+              {{ "login.button" | translate }}
             </button>
 
             <!-- Register -->
             <p class="text-center mt-4">
-              {{ 'login.noAccount' | translate }}
+              {{ "login.noAccount" | translate }}
               <a routerLink="/register" class="link link-hover">
-                {{ 'login.registerNow' | translate }}
+                {{ "login.registerNow" | translate }}
               </a>
             </p>
           </fieldset>
         </form>
-
       </div>
     </div>
   </div>

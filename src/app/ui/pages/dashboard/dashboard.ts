@@ -1,14 +1,14 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { Router } from '@angular/router';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
-  selector: 'welcome-component',
+  selector: 'kairoz-dashboard',
   standalone: true,
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css',
+  imports: [TranslatePipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
-
 })
 export class DashboardPage {
   constructor(private router: Router) {}

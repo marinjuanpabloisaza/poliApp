@@ -1,6 +1,6 @@
-import { Injectable, NgZone } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Injectable, NgZone } from '@angular/core';
+import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { environment } from '../../environments/environment';
 
@@ -19,25 +19,28 @@ interface RegisterResponse {
 
 @Injectable({ providedIn: 'root' })
 export class UserService {
-private apiUrl = `${environment.apiUrl}/user`;
+  private apiUrl = `${environment.apiUrl}/user`;
 
+  constructor(private http: HttpClient, private ngZone: NgZone) {}
 
-
-  constructor(private http: HttpClient, private ngZone: NgZone) {
-   
-  }
-
-  register(userName: string, password: string, name: string, lastName: string): Observable<RegisterResponse> {
-    return this.http.post<RegisterResponse>(`${this.apiUrl}/create`, { userName, password, name, lastName})
+  register(
+    userName: string,
+    password: string,
+    name: string,
+    lastName: string
+  ): Observable<RegisterResponse> {
+    return this.http
+      .post<RegisterResponse>(`${this.apiUrl}/create`, {
+        userName,
+        password,
+        name,
+        lastName,
+      })
       .pipe(
-        tap(res => {
+        tap((res) => {
           if (res.success && res.data) {
-          
-          
           }
         })
       );
   }
-
-
 }
