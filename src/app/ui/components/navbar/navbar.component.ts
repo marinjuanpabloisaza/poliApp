@@ -50,6 +50,7 @@ export class NavbarComponent implements OnDestroy {
   }
 
   logout() {
+    this.router.navigate(['/login']);
     this.authService.logout();
   }
 

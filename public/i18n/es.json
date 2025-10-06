@@ -1,8 +1,22 @@
 {
-  "dashboard": {
+  "navbar": {
     "logout": "Cerrar sesión",
     "role": "Rol",
-    "hi": "Hola"
+    "hi": "Hola",
+    "services": "Servicios",
+    "aboutUs": "Nosotros",
+    "contact": "Contacto"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "privacyPolicy": "Política de privacidad",
+    "termsAndConditions": "Términos y condiciones",
+    "followUs": "Síguenos"
+  },
+  "dashboard": {
+    "welcome": "Tecnología al momento justo",
+    "description": "Soluciones digitales que transforman ideas en realidades innovadoras.",
+    "discoverMore": "Descubre más"
   },
   "login": {
     "title": "Iniciar sesión",

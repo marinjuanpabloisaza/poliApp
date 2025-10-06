@@ -1,8 +1,22 @@
 {
-  "dashboard": {
+  "navbar": {
     "logout": "Logout",
     "role": "Role",
-    "hi": "Hi"
+    "hi": "Hi",
+    "services": "Services",
+    "aboutUs": "About us",
+    "contact": "Contact"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsAndConditions": "Terms and Conditions",
+    "followUs": "Follow us"
+  },
+  "dashboard": {
+    "welcome": "Technology at the right time",
+    "description": "Digital solutions that transform ideas into innovative realities.",
+    "discoverMore": "Discover more"
   },
   "login": {
     "title": "Sign in",
