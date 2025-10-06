@@ -1,6 +1,5 @@
 <main class="scroll-smooth">
   <section
-    id="contacto"
     class="hero-section min-h-screen flex items-center justify-center relative overflow-hidden"
   >
     <div
@@ -14,22 +13,19 @@
         <p class="text-xl md:text-2xl mb-8 opacity-90">
           {{ "dashboard.description" | translate }}
         </p>
-        <button class="btn btn-soft btn-primary">
+        <a class="btn btn-soft btn-primary" href="#contacto">
           {{ "dashboard.discoverMore" | translate }}
-        </button>
+        </a>
       </div>
     </div>
   </section>
   <section id="sobre-nosotros" class="about-section bg-white py-16 px-6">
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-8">
-        ¿Quiénes Somos?
+        {{ "dashboard.whoAreWe" | translate }}
       </h2>
       <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
-        En Kairoz creemos en el poder de la innovación. Somos una empresa de
-        servicios tecnológicos que combina creatividad, estrategia y tecnología
-        de vanguardia para dar vida a proyectos digitales que marcan la
-        diferencia.
+        {{ "dashboard.whoAreWeText" | translate }}
       </p>
     </div>
   </section>
@@ -41,7 +37,9 @@
 
     <div class="max-w-7xl mx-auto relative z-10">
       <div class="text-center mb-12">
-        <h2 class="text-4xl font-bold mb-4">Nuestros Servicios</h2>
+        <h2 class="text-4xl font-bold mb-4">
+          {{ "dashboard.ourServices" | translate }}
+        </h2>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -57,13 +55,16 @@
             </div>
           </figure>
           <div class="card-body">
-            <h2 class="card-title text-xl font-bold">Desarrollo de Software</h2>
+            <h2 class="card-title text-xl font-bold">
+              {{ "dashboard.service1" | translate }}
+            </h2>
             <p class="/90">
-              Aplicaciones web y móviles personalizadas con tecnologías modernas
-              y arquitecturas escalables.
+              {{ "dashboard.service1Text" | translate }}
             </p>
             <div class="card-actions justify-end mt-4">
-              <button class="btn btn-soft btn-info">Ver Detalles</button>
+              <button class="btn btn-soft btn-info">
+                {{ "dashboard.serviceBtnDetail" | translate }}
+              </button>
             </div>
           </div>
         </div>
@@ -81,14 +82,15 @@
           </figure>
           <div class="card-body">
             <h2 class="card-title text-xl font-bold">
-              Consultoría Tecnológica
+              {{ "dashboard.service2" | translate }}
             </h2>
             <p class="/90">
-              Asesoramiento estratégico para optimizar procesos y adoptar las
-              mejores tecnologías.
+              {{ "dashboard.service2Text" | translate }}
             </p>
             <div class="card-actions justify-end mt-4">
-              <button class="btn btn-soft btn-info">Ver Detalles</button>
+              <button class="btn btn-soft btn-info">
+                {{ "dashboard.serviceBtnDetail" | translate }}
+              </button>
             </div>
           </div>
         </div>
@@ -105,13 +107,16 @@
             </div>
           </figure>
           <div class="card-body">
-            <h2 class="card-title text-xl font-bold">Transformación Digital</h2>
+            <h2 class="card-title text-xl font-bold">
+              {{ "dashboard.service3" | translate }}
+            </h2>
             <p class="/90">
-              Modernización completa de procesos empresariales con soluciones
-              digitales innovadoras.
+              {{ "dashboard.service3Text" | translate }}
             </p>
             <div class="card-actions justify-end mt-4">
-              <button class="btn btn-soft btn-info">Ver Detalles</button>
+              <button class="btn btn-soft btn-info">
+                {{ "dashboard.serviceBtnDetail" | translate }}
+              </button>
             </div>
           </div>
         </div>
@@ -128,13 +133,16 @@
             </div>
           </figure>
           <div class="card-body">
-            <h2 class="card-title text-xl font-bold">Soluciones Cloud</h2>
+            <h2 class="card-title text-xl font-bold">
+              {{ "dashboard.service4" | translate }}
+            </h2>
             <p class="/90">
-              Migración y optimización de infraestructura en la nube para mayor
-              eficiencia.
+              {{ "dashboard.service4Text" | translate }}
             </p>
             <div class="card-actions justify-end mt-4">
-              <button class="btn btn-soft btn-info">Ver Detalles</button>
+              <button class="btn btn-soft btn-info">
+                {{ "dashboard.serviceBtnDetail" | translate }}
+              </button>
             </div>
           </div>
         </div>
@@ -151,13 +159,16 @@
             </div>
           </figure>
           <div class="card-body">
-            <h2 class="card-title text-xl font-bold">Ciberseguridad</h2>
+            <h2 class="card-title text-xl font-bold">
+              {{ "dashboard.service5" | translate }}
+            </h2>
             <p class="/90">
-              Protección integral de datos y sistemas con las mejores prácticas
-              de seguridad.
+              {{ "dashboard.service5Text" | translate }}
             </p>
             <div class="card-actions justify-end mt-4">
-              <button class="btn btn-soft btn-info">Ver Detalles</button>
+              <button class="btn btn-soft btn-info">
+                {{ "dashboard.serviceBtnDetail" | translate }}
+              </button>
             </div>
           </div>
         </div>
@@ -174,17 +185,30 @@
             </div>
           </figure>
           <div class="card-body">
-            <h2 class="card-title text-xl font-bold">Soporte Técnico</h2>
+            <h2 class="card-title text-xl font-bold">
+              {{ "dashboard.service6" | translate }}
+            </h2>
             <p class="/90">
-              Mantenimiento y soporte continuo para garantizar el funcionamiento
-              óptimo.
+              {{ "dashboard.service6Text" | translate }}
             </p>
             <div class="card-actions justify-end mt-4">
-              <button class="btn btn-soft btn-info">Ver Detalles</button>
+              <button class="btn btn-soft btn-info">
+                {{ "dashboard.serviceBtnDetail" | translate }}
+              </button>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </section>
+  <section id="contacto" class="about-section bg-white py-16 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-8">
+        {{ "dashboard.contactUs" | translate }}
+      </h2>
+      <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+        {{ "dashboard.contactUsText" | translate }}
+      </p>
     </div>
   </section>
 </main>

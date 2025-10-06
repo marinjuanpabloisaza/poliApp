@@ -16,7 +16,25 @@
   "dashboard": {
     "welcome": "Technology at the right time",
     "description": "Digital solutions that transform ideas into innovative realities.",
-    "discoverMore": "Discover more"
+    "discoverMore": "Discover more",
+    "whoAreWe": "Who are we?",
+    "whoAreWeText": "At Kairoz, we are a company dedicated to offering innovative digital solutions that drive the technological transformation of our clients. Our team of experts works with passion and commitment to develop tailored projects that meet the specific needs of each business. We specialize in a wide range of services, from software development and mobile applications to web design and technology consulting. At Kairoz, we believe in the power of technology to transform ideas into realities, and we are committed to accompanying our clients every step of their digital journey.",
+    "ourServices": "Our services",
+    "service1": "Software Development",
+    "service1Text": "We create custom software solutions that adapt to the specific needs of your business, using the latest technologies to ensure efficiency and scalability.",
+    "service2": "Technology Consulting",
+    "service2Text": "We offer expert advice to help you make informed decisions about the implementation of technologies that drive your company's growth and efficiency.",
+    "service3": "Digital Transformation",
+    "service3Text": "Complete modernization of business processes with innovative digital solutions.",
+    "service4": "Cloud Solutions",
+    "service4Text": "Migration and optimization of cloud infrastructure for greater efficiency.",
+    "service5": "Cybersecurity",
+    "service5Text": "Comprehensive protection of data and systems with best security practices.",
+    "service6": "Technical Support",
+    "service6Text": "Continuous maintenance and support to ensure optimal operation.",
+    "contactUs": "Contact us",
+    "contactUsText": "Ready to take your business to the next level? At Kairoz, we are here to help you transform your ideas into digital realities. Whether you need a custom software solution, an attractive website, or an innovative mobile application, our team of experts is ready to accompany you every step of the way. Feel free to contact us to discuss your needs and discover how we can collaborate to drive your company's success in the digital world. We look forward to hearing from you soon!",
+    "serviceBtnDetail": "See Details"
   },
   "login": {
     "title": "Sign in",
