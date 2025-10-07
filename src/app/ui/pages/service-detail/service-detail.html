@@ -3,6 +3,9 @@
   class="hero-section min-h-screen flex items-center justify-center relative overflow-hidden mt-8"
 >
   <!-- Animated gradient background -->
+  <div
+    class="absolute inset-0 {{ serviceData()?.gradientClass }} bg-[length:400%_400%] animate-gradient-shift opacity-80"
+  ></div>
 
   <div class="container max-w-6xl mx-auto px-6 relative z-10">
     <!-- Breadcrumb -->
@@ -23,7 +26,7 @@
                 d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
               ></path>
             </svg>
-            Dashboard
+{{ "serviceDetail.breadcrumb.dashboard" | translate }}
           </a>
         </li>
         <li>
@@ -41,7 +44,7 @@
                 d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
               ></path>
             </svg>
-            {{ lastSegment() }}
+{{ "serviceDetail.services." + serviceId() + ".title" | translate }}
           </a>
         </li>
       </ul>
@@ -52,17 +55,15 @@
       class="card bg-white border-white/20 shadow-lg hover:shadow-xl rounded-3xl p-10 mb-10 border text-center"
     >
       <div
-        class="service-icon w-24 h-24 bg-gradient-to-br from-pink-400 via-purple-400 to-pink-400 rounded-2xl flex items-center justify-center text-5xl mx-auto mb-6"
+        class="service-icon w-24 h-24 bg-gradient-to-br {{ serviceData()?.gradientColors }} rounded-2xl flex items-center justify-center text-5xl mx-auto mb-6"
       >
-        💻
+        {{ serviceData()?.icon }}
       </div>
       <h1 class="text-4xl md:text-5xl font-bold mb-4">
-        Desarrollo de Software
+        {{ "serviceDetail.services." + serviceId() + ".title" | translate }}
       </h1>
       <p class="text-lg md:text-xl /80 max-w-3xl mx-auto leading-relaxed">
-        Creamos aplicaciones web y móviles personalizadas utilizando las
-        tecnologías más modernas y arquitecturas escalables para impulsar el
-        crecimiento de tu negocio.
+        {{ "serviceDetail.services." + serviceId() + ".description" | translate }}
       </p>
     </div>
     <!-- backdrop-blur-15 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer -->
@@ -78,20 +79,11 @@
             <span
               class="w-1 h-6 bg-gradient-to-b from-pink-400 to-purple-400 rounded-full mr-3"
             ></span>
-            Descripción del Servicio
+{{ "serviceDetail.sections.description" | translate }}
           </h2>
           <div class="/90 leading-relaxed space-y-4">
             <p>
-              Nuestro equipo de desarrollo se especializa en crear soluciones
-              digitales robustas y escalables que se adaptan perfectamente a las
-              necesidades específicas de cada cliente. Desde aplicaciones web
-              complejas hasta sistemas empresariales, utilizamos metodologías
-              ágiles y las mejores prácticas de la industria.
-            </p>
-            <p>
-              Trabajamos con un enfoque centrado en el usuario, garantizando que
-              cada aplicación no solo funcione de manera óptima, sino que
-              también ofrezca una experiencia excepcional.
+              {{ "serviceDetail.services." + serviceId() + ".fullDescription" | translate }}
             </p>
           </div>
         </div>
@@ -104,73 +96,19 @@
             <span
               class="w-1 h-6 bg-gradient-to-b from-pink-400 to-purple-400 rounded-full mr-3"
             ></span>
-            Características Principales
+{{ "serviceDetail.sections.features" | translate }}
           </h2>
           <ul class="space-y-3">
+            @for (feature of features; track feature) {
             <li
               class="flex items-start pl-8 relative /90 border-b border-white/10 pb-3 last:border-b-0"
             >
               <span class="absolute left-0 text-green-400 font-bold text-lg"
                 >✓</span
               >
-              Desarrollo full-stack con tecnologías modernas
+              {{ feature }}
             </li>
-            <li
-              class="flex items-start pl-8 relative /90 border-b border-white/10 pb-3 last:border-b-0"
-            >
-              <span class="absolute left-0 text-green-400 font-bold text-lg"
-                >✓</span
-              >
-              Arquitecturas escalables y mantenibles
-            </li>
-            <li
-              class="flex items-start pl-8 relative /90 border-b border-white/10 pb-3 last:border-b-0"
-            >
-              <span class="absolute left-0 text-green-400 font-bold text-lg"
-                >✓</span
-              >
-              Integración con APIs y servicios externos
-            </li>
-            <li
-              class="flex items-start pl-8 relative /90 border-b border-white/10 pb-3 last:border-b-0"
-            >
-              <span class="absolute left-0 text-green-400 font-bold text-lg"
-                >✓</span
-              >
-              Diseño responsive y optimización móvil
-            </li>
-            <li
-              class="flex items-start pl-8 relative /90 border-b border-white/10 pb-3 last:border-b-0"
-            >
-              <span class="absolute left-0 text-green-400 font-bold text-lg"
-                >✓</span
-              >
-              Implementación de medidas de seguridad avanzadas
-            </li>
-            <li
-              class="flex items-start pl-8 relative /90 border-b border-white/10 pb-3 last:border-b-0"
-            >
-              <span class="absolute left-0 text-green-400 font-bold text-lg"
-                >✓</span
-              >
-              Testing automatizado y control de calidad
-            </li>
-            <li
-              class="flex items-start pl-8 relative /90 border-b border-white/10 pb-3 last:border-b-0"
-            >
-              <span class="absolute left-0 text-green-400 font-bold text-lg"
-                >✓</span
-              >
-              Documentación técnica completa
-            </li>
-            <li
-              class="flex items-start pl-8 relative /90 border-b border-white/10 pb-3 last:border-b-0"
-            >
-              <span class="absolute left-0 text-green-400 font-bold text-lg"
-                >✓</span
-              >
-              Soporte y mantenimiento continuo
-            </li>
+            }
           </ul>
         </div>
 
@@ -182,15 +120,15 @@
             <span
               class="w-1 h-6 bg-gradient-to-b from-pink-400 to-purple-400 rounded-full mr-3"
             ></span>
-            Tecnologías que Utilizamos
+{{ "serviceDetail.sections.technologies" | translate }}
           </h2>
 
           <p class="text-black/90 mb-5">
-            Trabajamos con un stack tecnológico robusto y actualizado:
+            {{ "serviceDetail.sections.technologiesText" | translate }}
           </p>
 
           <div class="tech-stack flex flex-wrap gap-3">
-            @for (tech of technologies(); track tech) {
+            @for (tech of technologies; track tech) {
             <span
               class="tech-badge bg-purple-700 text-white px-4 py-2 rounded-full text-sm backdrop-blur-10 border border-purple-600/50"
             >
@@ -207,23 +145,23 @@
         <div
           class="card bg-white shadow-lg hover:shadow-xl mb-10 backdrop-blur-15 rounded-2xl p-6 border border-white/20"
         >
-          <h3 class="text-lg font-bold mb-4">Información del Servicio</h3>
+          <h3 class="text-lg font-bold mb-4">{{ "serviceDetail.sections.serviceInfo" | translate }}</h3>
           <div class="space-y-3">
             <div class="flex justify-between pb-3 border-b border-white/10">
-              <span class="/70 text-sm">Duración típica:</span>
-              <span class="font-medium text-sm">3-6 meses</span>
+              <span class="/70 text-sm">{{ "serviceDetail.serviceInfo.duration" | translate }}</span>
+              <span class="font-medium text-sm">{{ serviceInfo?.duration }}</span>
             </div>
             <div class="flex justify-between pb-3 border-b border-white/10">
-              <span class="/70 text-sm">Equipo asignado:</span>
-              <span class="font-medium text-sm">4-8 desarrolladores</span>
+              <span class="/70 text-sm">{{ "serviceDetail.serviceInfo.team" | translate }}</span>
+              <span class="font-medium text-sm">{{ serviceInfo?.team }}</span>
             </div>
             <div class="flex justify-between pb-3 border-b border-white/10">
-              <span class="/70 text-sm">Modalidad:</span>
-              <span class="font-medium text-sm">Remoto/Presencial</span>
+              <span class="/70 text-sm">{{ "serviceDetail.serviceInfo.modality" | translate }}</span>
+              <span class="font-medium text-sm">{{ serviceInfo?.modality }}</span>
             </div>
             <div class="flex justify-between">
-              <span class="/70 text-sm">Soporte incluido:</span>
-              <span class="font-medium text-sm">3 meses</span>
+              <span class="/70 text-sm">{{ "serviceDetail.serviceInfo.support" | translate }}</span>
+              <span class="font-medium text-sm">{{ serviceInfo?.support }}</span>
             </div>
           </div>
         </div>
@@ -232,10 +170,10 @@
         <div
           class="card bg-white shadow-lg hover:shadow-xl mb-10 backdrop-blur-15 rounded-2xl p-6 border border-white/20"
         >
-          <h3 class="text-lg font-bold mb-4">Proceso de Trabajo</h3>
+          <h3 class="text-lg font-bold mb-4">{{ "serviceDetail.sections.workProcess" | translate }}</h3>
 
           <ul class="space-y-2">
-            @for (step of steps(); track step) {
+            @for (step of steps; track step) {
             <li class="flex items-start pl-6 relative text-sm text-black/90">
               <span class="absolute left-0 text-purple-500 font-bold">✓</span>
               {{ step }}
@@ -248,10 +186,10 @@
         <div
           class="card bg-white shadow-lg hover:shadow-xl mb-10 backdrop-blur-15 rounded-2xl p-6 border border-white/20"
         >
-          <h3 class="text-lg font-bold mb-4">Casos de Uso</h3>
+          <h3 class="text-lg font-bold mb-4">{{ "serviceDetail.sections.useCases" | translate }}</h3>
 
           <div class="space-y-2 text-sm text-black/90">
-            @for (useCase of useCases(); track useCase) {
+            @for (useCase of useCases; track useCase) {
             <p class="flex items-center">
               <span class="text-purple-500 font-bold mr-2">•</span>
               {{ useCase }}
@@ -267,23 +205,22 @@
       class="card bg-white border-white/20 shadow-lg hover:shadow-xl rounded-3xl p-10 mb-10 text-center border"
     >
       <h2 class="text-3xl md:text-4xl font-bold mb-4">
-        ¿Interesado en este servicio?
+        {{ cta.title }}
       </h2>
       <p class="/80 text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
-        Contacta con nuestro equipo de expertos para discutir tu proyecto y
-        obtener una propuesta personalizada sin compromiso.
+        {{ cta.description }}
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <button
           class="bg-purple-700 text-white px-8 py-4 rounded-2xl font-semibold hover:bg-purple-800 transition-all hover:-translate-y-1 hover:shadow-xl"
         >
-          💬 Solicitar Cotización
+          {{ cta.primaryButton }}
         </button>
 
         <button
           class="btn-secondary bg-white/20 px-8 py-4 rounded-2xl font-semibold backdrop-blur-10 border border-white/30 hover:bg-white/30 transition-all hover:-translate-y-1 hover:shadow-xl"
         >
-          📞 Agendar Consulta
+          {{ cta.secondaryButton }}
         </button>
       </div>
     </div>

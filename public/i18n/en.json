@@ -72,5 +72,262 @@
   "codeResponse": {
     "PASSWORD_NO_FOUNT": "Passwords do not match",
     "EMAIL_EXIST": "this userName aready exiist"
+  },
+  "serviceDetail": {
+    "breadcrumb": {
+      "dashboard": "Dashboard",
+      "serviceNotFound": "Service not found"
+    },
+    "sections": {
+      "description": "Service Description",
+      "features": "Key Features",
+      "technologies": "Technologies We Use",
+      "technologiesText": "We work with a robust and up-to-date technology stack:",
+      "serviceInfo": "Service Information",
+      "workProcess": "Work Process",
+      "useCases": "Use Cases"
+    },
+    "serviceInfo": {
+      "duration": "Typical duration:",
+      "team": "Assigned team:",
+      "modality": "Modality:",
+      "support": "Support included:"
+    },
+    "services": {
+      "desarrollo-software": {
+        "title": "Software Development",
+        "description": "We create custom web and mobile applications using the most modern technologies and scalable architectures to boost your business growth.",
+        "fullDescription": "Our development team specializes in creating robust and scalable digital solutions that perfectly adapt to the specific needs of each client. From complex web applications to enterprise systems, we use agile methodologies and industry best practices. We work with a user-centered approach, ensuring that each application not only works optimally, but also offers an exceptional experience.",
+        "features": [
+          "Full-stack development with modern technologies",
+          "Scalable and maintainable architectures",
+          "Integration with APIs and external services",
+          "Responsive design and mobile optimization",
+          "Implementation of advanced security measures",
+          "Automated testing and quality control",
+          "Complete technical documentation",
+          "Continuous support and maintenance"
+        ],
+        "technologies": [
+          "React", "Angular", "Vue.js", "Node.js", "Python", "Django", 
+          "PostgreSQL", "MongoDB", "AWS", "Docker", "Kubernetes", "Git"
+        ],
+        "steps": [
+          "Requirements analysis",
+          "Architecture design",
+          "Iterative development",
+          "Testing and QA",
+          "Deployment and monitoring"
+        ],
+        "useCases": [
+          "Enterprise management systems",
+          "E-commerce platforms",
+          "Mobile applications",
+          "Corporate web portals",
+          "APIs and microservices"
+        ],
+        "cta": {
+          "title": "Interested in this service?",
+          "description": "Contact our team of experts to discuss your project and get a personalized proposal without commitment.",
+          "primaryButton": "💬 Request Quote",
+          "secondaryButton": "📞 Schedule Consultation"
+        }
+      },
+      "consultoria-tecnologica": {
+        "title": "Technology Consulting",
+        "description": "We provide strategic technology advice to optimize processes, reduce costs and improve the operational efficiency of your company.",
+        "fullDescription": "Our technology consulting focuses on analyzing your current infrastructure and proposing strategic solutions that drive the digital transformation of your organization. We evaluate processes, identify improvement opportunities and design technology roadmaps that align with your business objectives.",
+        "features": [
+          "Analysis of current infrastructure",
+          "Evaluation of technological processes",
+          "Design of digital strategies",
+          "IT cost optimization",
+          "Personalized technology roadmap",
+          "System migration and modernization",
+          "Technical team training",
+          "Continuous follow-up and support"
+        ],
+        "technologies": [
+          "AWS", "Azure", "Google Cloud", "Docker", "Kubernetes", "Terraform",
+          "Ansible", "Jenkins", "GitLab CI", "Prometheus", "Grafana", "ELK Stack"
+        ],
+        "steps": [
+          "Technology audit",
+          "Gap analysis",
+          "Solution proposal",
+          "Implementation plan",
+          "Follow-up and optimization"
+        ],
+        "useCases": [
+          "Infrastructure modernization",
+          "IT process optimization",
+          "Cloud migration",
+          "DevOps implementation",
+          "Technology cost management"
+        ],
+        "cta": {
+          "title": "Need technology consulting?",
+          "description": "Our consultants are ready to help you optimize your technology infrastructure and achieve your business objectives.",
+          "primaryButton": "📋 Request Audit",
+          "secondaryButton": "💼 Strategic Consultation"
+        }
+      },
+      "transformacion-digital": {
+        "title": "Digital Transformation",
+        "description": "We accompany your company in the complete digitalization process, from strategy to implementation of innovative solutions.",
+        "fullDescription": "Digital transformation is more than implementing technology; it's changing the organizational culture to take full advantage of digital opportunities. Our comprehensive approach includes process evaluation, team training and gradual implementation of solutions that generate real value for your business.",
+        "features": [
+          "Digital maturity diagnosis",
+          "Comprehensive transformation strategy",
+          "Process automation",
+          "Training and cultural change",
+          "Digital solution implementation",
+          "ROI and KPI measurement",
+          "Organizational change management",
+          "Continuous monitoring and optimization"
+        ],
+        "technologies": [
+          "RPA", "AI/ML", "Business Intelligence", "CRM", "ERP", "Low-Code Platforms",
+          "Microsoft Power Platform", "Salesforce", "SAP", "Oracle", "Tableau", "Power BI"
+        ],
+        "steps": [
+          "Diagnosis and evaluation",
+          "Strategy and planning",
+          "Gradual implementation",
+          "Training and adoption",
+          "Continuous optimization"
+        ],
+        "useCases": [
+          "Process automation",
+          "CRM/ERP implementation",
+          "Analytics and Business Intelligence",
+          "E-commerce and digital channels",
+          "Digital document management"
+        ],
+        "cta": {
+          "title": "Ready to transform your company?",
+          "description": "Discover how we can help you digitize your processes and compete in today's digital market.",
+          "primaryButton": "🎯 Start Transformation",
+          "secondaryButton": "📊 Free Evaluation"
+        }
+      },
+      "cloud-solutions": {
+        "title": "Cloud Solutions",
+        "description": "We migrate and optimize your cloud infrastructure to improve the scalability, security and efficiency of your systems.",
+        "fullDescription": "Cloud solutions offer flexibility, scalability and optimized costs. Our specialized team helps you migrate your infrastructure safely, implement cloud-native architectures and optimize costs, ensuring high availability and security of your applications.",
+        "features": [
+          "Safe cloud migration",
+          "Cloud-native architectures",
+          "Cost optimization",
+          "High availability and scalability",
+          "Security and compliance",
+          "Monitoring and observability",
+          "Backup and disaster recovery",
+          "24/7 specialized support"
+        ],
+        "technologies": [
+          "AWS", "Azure", "Google Cloud", "Docker", "Kubernetes", "Terraform",
+          "CloudFormation", "Ansible", "Prometheus", "Grafana", "ELK Stack", "Datadog"
+        ],
+        "steps": [
+          "Current infrastructure evaluation",
+          "Migration plan",
+          "Gradual implementation",
+          "Optimization and tuning",
+          "Continuous monitoring"
+        ],
+        "useCases": [
+          "Physical server migration",
+          "Scalable web applications",
+          "Big Data and Analytics",
+          "Backup and disaster recovery",
+          "Development/test environments"
+        ],
+        "cta": {
+          "title": "Need to migrate to the cloud?",
+          "description": "Our cloud experts help you migrate safely and optimize your cloud infrastructure.",
+          "primaryButton": "☁️ Cloud Evaluation",
+          "secondaryButton": "💡 Technical Consultation"
+        }
+      },
+      "ciberseguridad": {
+        "title": "Cybersecurity",
+        "description": "We protect your company with comprehensive security solutions that guarantee the confidentiality, integrity and availability of your data.",
+        "fullDescription": "In an increasingly digitalized world, security is fundamental. We implement cybersecurity strategies adapted to your industry, including security audits, control implementation, 24/7 monitoring and incident response, protecting your organization against cyber threats.",
+        "features": [
+          "Comprehensive security audits",
+          "Security control implementation",
+          "24/7 monitoring (SOC)",
+          "Incident response",
+          "Regulatory compliance (GDPR, SOX, etc.)",
+          "Security awareness training",
+          "Penetration testing",
+          "Vulnerability management"
+        ],
+        "technologies": [
+          "SIEM", "EDR/XDR", "Firewalls", "VPN", "IAM", "PAM",
+          "Vulnerability Scanners", "Nessus", "Qualys", "CrowdStrike", "SentinelOne", "Splunk"
+        ],
+        "steps": [
+          "Risk assessment",
+          "Security strategy design",
+          "Control implementation",
+          "Monitoring and detection",
+          "Response and recovery"
+        ],
+        "useCases": [
+          "Sensitive data protection",
+          "Regulatory compliance",
+          "Attack prevention",
+          "Incident response",
+          "Security audits"
+        ],
+        "cta": {
+          "title": "Is your company protected?",
+          "description": "Evaluate the security of your organization and protect your most valuable assets with our cybersecurity solutions.",
+          "primaryButton": "🔍 Security Audit",
+          "secondaryButton": "🛡️ Protection Consultation"
+        }
+      },
+      "soporte-tecnico": {
+        "title": "Technical Support",
+        "description": "We provide specialized technical support to keep your systems running optimally and resolve any incidents quickly.",
+        "fullDescription": "Our technical support team is available to resolve any incident, perform preventive maintenance and optimize the performance of your systems. We offer different levels of support adapted to the needs of your company, guaranteeing operational continuity.",
+        "features": [
+          "24/7 technical support",
+          "Preventive maintenance",
+          "Incident resolution",
+          "Performance optimization",
+          "Updates and patches",
+          "Proactive monitoring",
+          "Technical training",
+          "Documentation and reports"
+        ],
+        "technologies": [
+          "Windows Server", "Linux", "VMware", "Hyper-V", "Active Directory",
+          "Exchange", "Office 365", "Backup Solutions", "Monitoring Tools", "Ticketing Systems"
+        ],
+        "steps": [
+          "Initial evaluation",
+          "Personalized support plan",
+          "Monitoring implementation",
+          "Continuous support",
+          "Optimization and improvement"
+        ],
+        "useCases": [
+          "Server support",
+          "Application maintenance",
+          "Incident resolution",
+          "Performance optimization",
+          "System migration"
+        ],
+        "cta": {
+          "title": "Need technical support?",
+          "description": "Keep your systems running perfectly with our specialized technical support team.",
+          "primaryButton": "🆘 Request Support",
+          "secondaryButton": "📞 Emergency Call"
+        }
+      }
+    }
   }
 }

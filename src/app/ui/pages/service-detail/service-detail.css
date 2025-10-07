@@ -15,6 +15,31 @@
   animation: gradient-shift 12s ease infinite;
 }
 
+/* Dynamic gradient classes for different services */
+.gradient-blue {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
+}
+
+.gradient-green {
+  background: linear-gradient(135deg, #10b981, #14b8a6, #06b6d4);
+}
+
+.gradient-orange {
+  background: linear-gradient(135deg, #f97316, #ef4444, #ec4899);
+}
+
+.gradient-indigo {
+  background: linear-gradient(135deg, #6366f1, #3b82f6, #8b5cf6);
+}
+
+.gradient-purple {
+  background: linear-gradient(135deg, #8b5cf6, #ec4899, #ef4444);
+}
+
+.gradient-yellow {
+  background: linear-gradient(135deg, #eab308, #f97316, #ef4444);
+}
+
 /* Glassmorphism effects */
 .backdrop-blur-10 {
   backdrop-filter: blur(10px);
