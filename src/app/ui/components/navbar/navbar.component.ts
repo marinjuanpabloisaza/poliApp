@@ -30,6 +30,7 @@ export class NavbarComponent implements OnDestroy {
 
   private sub: Subscription;
   currentUrl = signal<string>('');
+  currentLang = signal<string>('es');
 
   constructor(
     private translate: TranslateService,
@@ -47,6 +48,14 @@ export class NavbarComponent implements OnDestroy {
       .subscribe((event: NavigationEnd) => {
         this.currentUrl.set(event.url);
       });
+
+    // Suscribirse a cambios de idioma
+    this.translate.onLangChange.subscribe((event) => {
+      this.currentLang.set(event.lang);
+    });
+
+    // Establecer idioma inicial
+    this.currentLang.set(this.translate.currentLang || 'es');
   }
 
   logout() {
@@ -55,9 +64,29 @@ export class NavbarComponent implements OnDestroy {
   }
 
   switchLang() {
-    const current = this.translate.currentLang;
+    const current = this.currentLang();
     const nextLang = current === 'es' ? 'en' : 'es';
-    this.translate.use(nextLang);
+    console.log('Current lang:', current, 'Switching to:', nextLang);
+    
+    this.translate.use(nextLang).subscribe({
+      next: (translations) => {
+        console.log('Language changed successfully to:', nextLang);
+        this.currentLang.set(nextLang);
+      },
+      error: (error) => {
+        console.error('Error changing language:', error);
+      }
+    });
+  }
+
+  get currentLanguage(): string {
+    const current = this.currentLang();
+    return current === 'es' ? 'ES' : 'EN';
+  }
+
+  get currentLanguageName(): string {
+    const current = this.currentLang();
+    return current === 'es' ? 'Español' : 'English';
   }
 
   isServicePage(): boolean {
